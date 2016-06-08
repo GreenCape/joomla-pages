@@ -24,13 +24,13 @@ class MenuItemsManagerPage extends AdminManagerPage
 	 * @var    array
 	 * @since  3.0
 	 */
-	public $filters = array(
+	public $filters = [
 		'Menu'       => 'menutype',
 		'Max Levels' => 'filter_level',
 		'Status'     => 'filter_published',
 		'Access'     => 'filter_access',
 		'Language'   => 'filter_language',
-	);
+	];
 
 	/**
 	 * Array of toolbar id values for this page
@@ -38,7 +38,7 @@ class MenuItemsManagerPage extends AdminManagerPage
 	 * @var    array
 	 * @since  3.0
 	 */
-	public $toolbar = array(
+	public $toolbar = [
 		'New'         => 'toolbar-new',
 		'Edit'        => 'toolbar-edit',
 		'Publish'     => 'toolbar-publish',
@@ -50,7 +50,7 @@ class MenuItemsManagerPage extends AdminManagerPage
 		'Rebuild'     => 'toolbar-refresh',
 		'Batch'       => 'toolbar-batch',
 		'Help'        => 'toolbar-help',
-	);
+	];
 
 	/**
 	 * Array of submenu links used for this page
@@ -58,9 +58,9 @@ class MenuItemsManagerPage extends AdminManagerPage
 	 * @var    array
 	 * @since  3.0
 	 */
-	public $submenu = array(
+	public $submenu = [
 		'option=com_menus&view=menus',
-	);
+	];
 
 	/**
 	 * XPath string used to uniquely identify this page
@@ -92,7 +92,7 @@ class MenuItemsManagerPage extends AdminManagerPage
 	 *
 	 * @return  MenuItemsManagerPage
 	 */
-	public function addMenuItem($title = 'Test Menu Item', $menuItemType = 'List All Categories', $menuLocation = 'Main Menu', array $otherFields = array())
+	public function addMenuItem($title = 'Test Menu Item', $menuItemType = 'List All Categories', $menuLocation = 'Main Menu', array $otherFields = [])
 	{
 		/* @var $menuItemEditPage MenuItemEditPage */
 		$this->setFilter('Menu', $menuLocation);
@@ -100,7 +100,7 @@ class MenuItemsManagerPage extends AdminManagerPage
 		$menuItemEditPage = $this->test->getPageObject('MenuItemEditPage');
 		$menuItemEditPage->setMenuItemType($menuItemType);
 
-		$fields = array('Menu title' => $title, 'Menu Location' => $menuLocation);
+		$fields = ['Menu title' => $title, 'Menu Location' => $menuLocation];
 
 		if (count($otherFields) > 0)
 		{

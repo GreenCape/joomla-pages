@@ -22,7 +22,7 @@ abstract class AdminEditPage extends AdminPage
 	 * @var    array
 	 * @since  3.2
 	 */
-	public $tabs = array();
+	public $tabs = [];
 
 	/**
 	 * Array of tab labels for this page
@@ -30,7 +30,7 @@ abstract class AdminEditPage extends AdminPage
 	 * @var    array
 	 * @since  3.2
 	 */
-	public $tabLabels = array();
+	public $tabLabels = [];
 
 	/**
 	 * Array of groups for this page. A group is a collapsable slider inside a tab.
@@ -41,25 +41,25 @@ abstract class AdminEditPage extends AdminPage
 	 * @var    array
 	 * @since  3.2
 	 */
-	public $groups = array();
+	public $groups = [];
 
 	/**
 	 * Array of expected id values for toolbar div elements
 	 *
 	 * @var array
 	 */
-	public $toolbar = array(
+	public $toolbar = [
 		'Save'         => 'toolbar-apply',
 		'Save & Close' => 'toolbar-save',
 		'Save & New'   => 'toolbar-save-new',
 		'Cancel'       => 'toolbar-cancel',
 		'Help'         => 'toolbar-help',
-	);
+	];
 
 	/**
 	 * @var  array  Input fields
 	 */
-	public $inputFields = array();
+	public $inputFields = [];
 
 	/**
 	 * Get all input fields
@@ -68,9 +68,9 @@ abstract class AdminEditPage extends AdminPage
 	 *
 	 * @return  array  Input fields
 	 */
-	public function getAllInputFields($tabIds = array())
+	public function getAllInputFields($tabIds = [])
 	{
-		$return = array();
+		$return = [];
 		if (count($tabIds) > 0)
 		{
 			// Get header fields
@@ -145,7 +145,7 @@ abstract class AdminEditPage extends AdminPage
 	 */
 	protected function getInputFieldObjects($labels, $tabId, $groupLabel = null)
 	{
-		$return = array();
+		$return = [];
 		foreach ($labels as $label)
 		{
 			if ($object = $this->getInputField($tabId, $label))
@@ -282,7 +282,7 @@ abstract class AdminEditPage extends AdminPage
 	 */
 	public function getOptionText(WebElement $element)
 	{
-		$optionText = array();
+		$optionText = [];
 		$options    = $element->findElements(By::tagName('li'));
 		$i          = 0;
 		foreach ($options as $option)
@@ -367,7 +367,7 @@ abstract class AdminEditPage extends AdminPage
 	public function getTabIds()
 	{
 		$tabs   = $this->driver->findElements(By::xPath("//div[@class='tab-content']/div"));
-		$return = array();
+		$return = [];
 		foreach ($tabs as $tab)
 		{
 			$return[] = $tab->getAttribute('id');
@@ -412,7 +412,7 @@ abstract class AdminEditPage extends AdminPage
 	{
 		$this->selectTab($tabText);
 		$el   = $this->driver->findElement(By::id($id));
-		$test = $this->driver->executeScript("document.getElementById(arguments[0]).fireEvent('mouseenter');", array($id));
+		$test = $this->driver->executeScript("document.getElementById(arguments[0]).fireEvent('mouseenter');", [$id]);
 		sleep(1);
 		$tip     = $el->findElement(By::xPath("//div[@class='tip-text']"));
 		$tipText = $tip->getText();
@@ -643,7 +643,7 @@ abstract class AdminEditPage extends AdminPage
 	{
 		$inputFields = $this->getAllInputFields($this->getTabIds());
 		$tabs        = $this->tabs;
-		$helpText    = array();
+		$helpText    = [];
 		foreach ($inputFields as $el)
 		{
 			$this->selectTab($el->tab);
@@ -662,7 +662,7 @@ abstract class AdminEditPage extends AdminPage
 			}
 		}
 
-		$result = array();
+		$result = [];
 		
 		foreach ($tabs as $tab)
 		{
@@ -687,7 +687,7 @@ abstract class AdminEditPage extends AdminPage
 	 */
 	public function toWikiHelpRadio(stdClass $object)
 	{
-		$optionText = array();
+		$optionText = [];
 		$options    = $object->element->findElements(By::tagName('label'));
 		foreach ($options as $option)
 		{

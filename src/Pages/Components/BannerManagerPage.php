@@ -24,14 +24,14 @@ class BannerManagerPage extends AdminManagerPage
 	 * @var array
 	 * @since 3.2
 	 */
-	public $filters = array(
+	public $filters = [
 		'Sort Table By:'  => 'list_fullordering',
 		'20'              => 'list_limit',
 		'Select Status'   => 'filter_state',
 		'Select Client'   => 'filter_client_id',
 		'Select Category' => 'filter_category_id',
 		'Select Language' => 'filter_language'
-	);
+	];
 
 	/**
 	 * Array of toolbar id values for this page
@@ -39,7 +39,7 @@ class BannerManagerPage extends AdminManagerPage
 	 * @var    array
 	 * @since  3.2
 	 */
-	public $toolbar = array(
+	public $toolbar = [
 		'New'         => 'toolbar-new',
 		'Edit'        => 'toolbar-edit',
 		'Publish'     => 'toolbar-publish',
@@ -51,7 +51,7 @@ class BannerManagerPage extends AdminManagerPage
 		'Batch'       => 'toolbar-batch',
 		'Options'     => 'toolbar-options',
 		'Help'        => 'toolbar-help',
-	);
+	];
 
 	/**
 	 * XPath string used to uniquely identify this page
@@ -81,7 +81,7 @@ class BannerManagerPage extends AdminManagerPage
 	{
 		$this->clickButton('toolbar-new');
 		$bannerEditPage = $this->test->getPageObject('BannerEditPage');
-		$bannerEditPage->setFieldValues(array('Name' => $name));
+		$bannerEditPage->setFieldValues(['Name' => $name]);
 		if ($fields)
 		{
 			$bannerEditPage->setFieldValues($fields);

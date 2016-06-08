@@ -24,7 +24,7 @@ class ArticleManagerPage extends AdminManagerPage
 	 * @var    array
 	 * @since  3.0
 	 */
-	public $filters = array(
+	public $filters = [
 		'Sort Table By:'    => 'list_fullordering',
 		'20'                => 'list_limit',
 		'Select Status'     => 'filter_published',
@@ -34,7 +34,7 @@ class ArticleManagerPage extends AdminManagerPage
 		'Select Author'     => 'filter_author_id',
 		'Select Language'   => 'filter_language',
 		'Select Tag'        => 'filter_tag'
-	);
+	];
 
 	/**
 	 * Array of toolbar id values for this page
@@ -42,7 +42,7 @@ class ArticleManagerPage extends AdminManagerPage
 	 * @var    array
 	 * @since  3.0
 	 */
-	public $toolbar = array(
+	public $toolbar = [
 		'New'         => 'toolbar-new',
 		'Edit'        => 'toolbar-edit',
 		'Publish'     => 'toolbar-publish',
@@ -55,7 +55,7 @@ class ArticleManagerPage extends AdminManagerPage
 		'Batch'       => 'toolbar-batch',
 		'Options'     => 'toolbar-options',
 		'Help'        => 'toolbar-help',
-	);
+	];
 
 	/**
 	 * XPath string used to uniquely identify this page
@@ -81,14 +81,14 @@ class ArticleManagerPage extends AdminManagerPage
 	 *
 	 * @return  ArticleManagerPage
 	 */
-	public function addArticle($name = 'Testing Articles', $category = 'Sample Data-Articles', $otherFields = array())
+	public function addArticle($name = 'Testing Articles', $category = 'Sample Data-Articles', $otherFields = [])
 	{
 		$this->clickButton('toolbar-new');
 		$articleEditPage = $this->test->getPageObject('ArticleEditPage');
-		$articleEditPage->setFieldValues(array(
+		$articleEditPage->setFieldValues([
 			'Title'    => $name,
 			'Category' => $category
-		));
+		]);
 
 		if (count($otherFields > 0))
 		{
@@ -107,7 +107,7 @@ class ArticleManagerPage extends AdminManagerPage
 	 *
 	 * @return  void
 	 */
-	public function editArticle($name, $fields = array())
+	public function editArticle($name, $fields = [])
 	{
 		$this->clickItem($name);
 		$articleEditPage = $this->test->getPageObject('ArticleEditPage');

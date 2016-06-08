@@ -24,11 +24,11 @@ class PluginManagerPage extends AdminManagerPage
 	 * @var    array
 	 * @since  3.0
 	 */
-	public $filters = array(
+	public $filters = [
 		'Select Status' => 'filter_enabled',
 		'Select Type'   => 'filter_folder',
 		'Select Access' => 'filter_access',
-	);
+	];
 
 	/**
 	 * Array of toolbar id values for this page
@@ -36,14 +36,14 @@ class PluginManagerPage extends AdminManagerPage
 	 * @var    array
 	 * @since  3.0
 	 */
-	public $toolbar = array(
+	public $toolbar = [
 		'Edit'     => 'toolbar-edit',
 		'Enable'   => 'toolbar-publish',
 		'Disable'  => 'toolbar-unpublish',
 		'Check In' => 'toolbar-checkin',
 		'Options'  => 'toolbar-options',
 		'Help'     => 'toolbar-help',
-	);
+	];
 
 	/**
 	 * XPath string used to uniquely identify this page

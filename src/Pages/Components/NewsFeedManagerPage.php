@@ -24,13 +24,13 @@ class NewsFeedManagerPage extends AdminManagerPage
 	 * @var    array
 	 * @since  3.0
 	 */
-	public $filters = array(
+	public $filters = [
 		'Select Status'   => 'filter_published',
 		'Select Category' => 'filter_category_id',
 		'Select Access'   => 'filter_access',
 		'Select Language' => 'filter_language',
 		'Select Tags'     => 'filter_tag'
-	);
+	];
 
 	/**
 	 * Array of toolbar id values for this page
@@ -38,7 +38,7 @@ class NewsFeedManagerPage extends AdminManagerPage
 	 * @var    array
 	 * @since  3.0
 	 */
-	public $toolbar = array(
+	public $toolbar = [
 		'New'         => 'toolbar-new',
 		'Edit'        => 'toolbar-edit',
 		'Publish'     => 'toolbar-publish',
@@ -50,7 +50,7 @@ class NewsFeedManagerPage extends AdminManagerPage
 		'Batch'       => 'toolbar-batch',
 		'Options'     => 'toolbar-options',
 		'Help'        => 'toolbar-help',
-	);
+	];
 
 	/**
 	 * XPath string used to uniquely identify this page
@@ -85,14 +85,14 @@ class NewsFeedManagerPage extends AdminManagerPage
 		$this->clickButton('toolbar-new');
 		$newsFeedEditPage = $this->test->getPageObject('NewsFeedEditPage');
 		$newsFeedEditPage->setFieldValues(
-			array(
+			[
 				'Title'       => $name,
 				'Link'        => $link,
 				'Category'    => $category,
 				'Description' => $description,
 				'Caption'     => $caption,
 				'Alt text'    => $alt
-			)
+			]
 		);
 		$newsFeedEditPage->clickButton('toolbar-save');
 		$this->test->getPageObject('NewsFeedManagerPage');

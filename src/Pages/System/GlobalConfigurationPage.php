@@ -17,22 +17,22 @@ class GlobalConfigurationPage extends AdminEditPage
 	/**
 	 * @var array  Tabs
 	 */
-	public $tabs = array('page-site', 'page-system', 'page-server', 'page-permissions', 'page-filters');
+	public $tabs = ['page-site', 'page-system', 'page-server', 'page-permissions', 'page-filters'];
 
 	/**
 	 * @var array  Tab labels
 	 */
-	public $tabLabels = array('Site', 'System', 'Server', 'Permissions', 'Text Filters');
+	public $tabLabels = ['Site', 'System', 'Server', 'Permissions', 'Text Filters'];
 
 	/**
 	 * @var array  Toolbar
 	 */
-	public $toolbar = array(
+	public $toolbar = [
 		'Save'         => 'toolbar-apply',
 		'Save & Close' => 'toolbar-save',
 		'Cancel'       => 'toolbar-cancel',
 		'Help'         => 'toolbar-help',
-	);
+	];
 
 	/**
 	 * Array of all input fields on the page (except for Permissions and Text Filters tabs). Each value is an associated array as follows:
@@ -45,64 +45,64 @@ class GlobalConfigurationPage extends AdminEditPage
 	 *
 	 * @var array
 	 */
-	public $inputFields = array(
-		array('label' => 'Site Name', 'id' => 'jform_sitename', 'type' => 'input', 'tab' => 'page-site'),
-		array('label' => 'Site Offline', 'id' => 'jform_offline', 'type' => 'fieldset', 'tab' => 'page-site'),
-		array('label' => 'Offline Message', 'id' => 'jform_display_offline_message', 'type' => 'select', 'tab' => 'page-site'),
-		array('label' => 'Custom Message', 'id' => 'jform_offline_message', 'type' => 'textarea', 'tab' => 'page-site'),
-		array('label' => 'Offline Image', 'id' => 'jform_offline_image', 'type' => 'input', 'tab' => 'page-site'),
-		array('label' => 'Mouse-over Edit Icons for', 'id' => 'jform_frontediting', 'type' => 'select', 'tab' => 'page-site'),
-		array('label' => 'Default Editor', 'id' => 'jform_editor', 'type' => 'select', 'tab' => 'page-site'),
-		array('label' => 'Default Captcha', 'id' => 'jform_captcha', 'type' => 'select', 'tab' => 'page-site'),
-		array('label' => 'Default Access Level', 'id' => 'jform_access', 'type' => 'select', 'tab' => 'page-site'),
-		array('label' => 'Default List Limit', 'id' => 'jform_list_limit', 'type' => 'select', 'tab' => 'page-site'),
-		array('label' => 'Default Feed Limit', 'id' => 'jform_feed_limit', 'type' => 'select', 'tab' => 'page-site'),
-		array('label' => 'Feed Email Address', 'id' => 'jform_feed_email', 'type' => 'select', 'tab' => 'page-site'),
-		array('label' => 'Site Meta Description', 'id' => 'jform_MetaDesc', 'type' => 'textarea', 'tab' => 'page-site'),
-		array('label' => 'Site Meta Keywords', 'id' => 'jform_MetaKeys', 'type' => 'textarea', 'tab' => 'page-site'),
-		array('label' => 'Robots', 'id' => 'jform_robots', 'type' => 'select', 'tab' => 'page-site'),
-		array('label' => 'Content Rights', 'id' => 'jform_MetaRights', 'type' => 'textarea', 'tab' => 'page-site'),
-		array('label' => 'Show Author Meta Tag', 'id' => 'jform_MetaAuthor', 'type' => 'fieldset', 'tab' => 'page-site'),
-		array('label' => 'Show Joomla! Version', 'id' => 'jform_MetaVersion', 'type' => 'fieldset', 'tab' => 'page-site'),
-		array('label' => 'Search Engine Friendly URLs', 'id' => 'jform_sef', 'type' => 'fieldset', 'tab' => 'page-site'),
-		array('label' => 'Use URL Rewriting', 'id' => 'jform_sef_rewrite', 'type' => 'fieldset', 'tab' => 'page-site'),
-		array('label' => 'Adds Suffix to URL', 'id' => 'jform_sef_suffix', 'type' => 'fieldset', 'tab' => 'page-site'),
-		array('label' => 'Unicode Aliases', 'id' => 'jform_unicodeslugs', 'type' => 'fieldset', 'tab' => 'page-site'),
-		array('label' => 'Include Site Name in Page Titles', 'id' => 'jform_sitename_pagetitles', 'type' => 'select', 'tab' => 'page-site'),
-		array('label' => 'Cookie Domain', 'id' => 'jform_cookie_domain', 'type' => 'input', 'tab' => 'page-site'),
-		array('label' => 'Cookie Path', 'id' => 'jform_cookie_path', 'type' => 'input', 'tab' => 'page-site'),
-		array('label' => 'Path to Log Folder', 'id' => 'jform_log_path', 'type' => 'input', 'tab' => 'page-system'),
-		array('label' => 'Help Server', 'id' => 'jform_helpurl', 'type' => 'select', 'tab' => 'page-system'),
-		array('label' => 'Debug System', 'id' => 'jform_debug', 'type' => 'fieldset', 'tab' => 'page-system'),
-		array('label' => 'Debug Language', 'id' => 'jform_debug_lang', 'type' => 'fieldset', 'tab' => 'page-system'),
-		array('label' => 'Cache', 'id' => 'jform_caching', 'type' => 'select', 'tab' => 'page-system'),
-		array('label' => 'Cache Handler', 'id' => 'jform_cache_handler', 'type' => 'select', 'tab' => 'page-system'),
-		array('label' => 'Cache Time', 'id' => 'jform_cachetime', 'type' => 'input', 'tab' => 'page-system'),
-		array('label' => 'Session Lifetime', 'id' => 'jform_lifetime', 'type' => 'input', 'tab' => 'page-system'),
-		array('label' => 'Session Handler', 'id' => 'jform_session_handler', 'type' => 'select', 'tab' => 'page-system'),
-		array('label' => 'Path to Temp Folder', 'id' => 'jform_tmp_path', 'type' => 'input', 'tab' => 'page-server'),
-		array('label' => 'Gzip Page Compression', 'id' => 'jform_gzip', 'type' => 'fieldset', 'tab' => 'page-server'),
-		array('label' => 'Error Reporting', 'id' => 'jform_error_reporting', 'type' => 'select', 'tab' => 'page-server'),
-		array('label' => 'Force SSL', 'id' => 'jform_force_ssl', 'type' => 'select', 'tab' => 'page-server'),
-		array('label' => 'Server Time Zone', 'id' => 'jform_offset', 'type' => 'select', 'tab' => 'page-server'),
-		array('label' => 'Enable FTP', 'id' => 'jform_ftp_enable', 'type' => 'fieldset', 'tab' => 'page-server'),
-		array('label' => 'Enable Proxy', 'id' => 'jform_proxy_enable', 'type' => 'fieldset', 'tab' => 'page-server'),
-		array('label' => 'Database Type', 'id' => 'jform_dbtype', 'type' => 'select', 'tab' => 'page-server'),
-		array('label' => 'Host', 'id' => 'jform_host', 'type' => 'input', 'tab' => 'page-server'),
-		array('label' => 'Database Username', 'id' => 'jform_user', 'type' => 'input', 'tab' => 'page-server'),
-		array('label' => 'Database Name', 'id' => 'jform_db', 'type' => 'input', 'tab' => 'page-server'),
-		array('label' => 'Database Tables Prefix', 'id' => 'jform_dbprefix', 'type' => 'input', 'tab' => 'page-server'),
-		array('label' => 'Send Mail', 'id' => 'jform_mailonline', 'type' => 'fieldset', 'tab' => 'page-server'),
-		array('label' => 'Mailer', 'id' => 'jform_mailer', 'type' => 'select', 'tab' => 'page-server'),
-		array('label' => 'From email', 'id' => 'jform_mailfrom', 'type' => 'input', 'tab' => 'page-server'),
-		array('label' => 'From Name', 'id' => 'jform_fromname', 'type' => 'input', 'tab' => 'page-server'),
-		array('label' => 'Disable Mass Mail', 'id' => 'jform_massmailoff', 'type' => 'fieldset', 'tab' => 'page-server')
-	);
+	public $inputFields = [
+		['label' => 'Site Name', 'id' => 'jform_sitename', 'type' => 'input', 'tab' => 'page-site'],
+		['label' => 'Site Offline', 'id' => 'jform_offline', 'type' => 'fieldset', 'tab' => 'page-site'],
+		['label' => 'Offline Message', 'id' => 'jform_display_offline_message', 'type' => 'select', 'tab' => 'page-site'],
+		['label' => 'Custom Message', 'id' => 'jform_offline_message', 'type' => 'textarea', 'tab' => 'page-site'],
+		['label' => 'Offline Image', 'id' => 'jform_offline_image', 'type' => 'input', 'tab' => 'page-site'],
+		['label' => 'Mouse-over Edit Icons for', 'id' => 'jform_frontediting', 'type' => 'select', 'tab' => 'page-site'],
+		['label' => 'Default Editor', 'id' => 'jform_editor', 'type' => 'select', 'tab' => 'page-site'],
+		['label' => 'Default Captcha', 'id' => 'jform_captcha', 'type' => 'select', 'tab' => 'page-site'],
+		['label' => 'Default Access Level', 'id' => 'jform_access', 'type' => 'select', 'tab' => 'page-site'],
+		['label' => 'Default List Limit', 'id' => 'jform_list_limit', 'type' => 'select', 'tab' => 'page-site'],
+		['label' => 'Default Feed Limit', 'id' => 'jform_feed_limit', 'type' => 'select', 'tab' => 'page-site'],
+		['label' => 'Feed Email Address', 'id' => 'jform_feed_email', 'type' => 'select', 'tab' => 'page-site'],
+		['label' => 'Site Meta Description', 'id' => 'jform_MetaDesc', 'type' => 'textarea', 'tab' => 'page-site'],
+		['label' => 'Site Meta Keywords', 'id' => 'jform_MetaKeys', 'type' => 'textarea', 'tab' => 'page-site'],
+		['label' => 'Robots', 'id' => 'jform_robots', 'type' => 'select', 'tab' => 'page-site'],
+		['label' => 'Content Rights', 'id' => 'jform_MetaRights', 'type' => 'textarea', 'tab' => 'page-site'],
+		['label' => 'Show Author Meta Tag', 'id' => 'jform_MetaAuthor', 'type' => 'fieldset', 'tab' => 'page-site'],
+		['label' => 'Show Joomla! Version', 'id' => 'jform_MetaVersion', 'type' => 'fieldset', 'tab' => 'page-site'],
+		['label' => 'Search Engine Friendly URLs', 'id' => 'jform_sef', 'type' => 'fieldset', 'tab' => 'page-site'],
+		['label' => 'Use URL Rewriting', 'id' => 'jform_sef_rewrite', 'type' => 'fieldset', 'tab' => 'page-site'],
+		['label' => 'Adds Suffix to URL', 'id' => 'jform_sef_suffix', 'type' => 'fieldset', 'tab' => 'page-site'],
+		['label' => 'Unicode Aliases', 'id' => 'jform_unicodeslugs', 'type' => 'fieldset', 'tab' => 'page-site'],
+		['label' => 'Include Site Name in Page Titles', 'id' => 'jform_sitename_pagetitles', 'type' => 'select', 'tab' => 'page-site'],
+		['label' => 'Cookie Domain', 'id' => 'jform_cookie_domain', 'type' => 'input', 'tab' => 'page-site'],
+		['label' => 'Cookie Path', 'id' => 'jform_cookie_path', 'type' => 'input', 'tab' => 'page-site'],
+		['label' => 'Path to Log Folder', 'id' => 'jform_log_path', 'type' => 'input', 'tab' => 'page-system'],
+		['label' => 'Help Server', 'id' => 'jform_helpurl', 'type' => 'select', 'tab' => 'page-system'],
+		['label' => 'Debug System', 'id' => 'jform_debug', 'type' => 'fieldset', 'tab' => 'page-system'],
+		['label' => 'Debug Language', 'id' => 'jform_debug_lang', 'type' => 'fieldset', 'tab' => 'page-system'],
+		['label' => 'Cache', 'id' => 'jform_caching', 'type' => 'select', 'tab' => 'page-system'],
+		['label' => 'Cache Handler', 'id' => 'jform_cache_handler', 'type' => 'select', 'tab' => 'page-system'],
+		['label' => 'Cache Time', 'id' => 'jform_cachetime', 'type' => 'input', 'tab' => 'page-system'],
+		['label' => 'Session Lifetime', 'id' => 'jform_lifetime', 'type' => 'input', 'tab' => 'page-system'],
+		['label' => 'Session Handler', 'id' => 'jform_session_handler', 'type' => 'select', 'tab' => 'page-system'],
+		['label' => 'Path to Temp Folder', 'id' => 'jform_tmp_path', 'type' => 'input', 'tab' => 'page-server'],
+		['label' => 'Gzip Page Compression', 'id' => 'jform_gzip', 'type' => 'fieldset', 'tab' => 'page-server'],
+		['label' => 'Error Reporting', 'id' => 'jform_error_reporting', 'type' => 'select', 'tab' => 'page-server'],
+		['label' => 'Force SSL', 'id' => 'jform_force_ssl', 'type' => 'select', 'tab' => 'page-server'],
+		['label' => 'Server Time Zone', 'id' => 'jform_offset', 'type' => 'select', 'tab' => 'page-server'],
+		['label' => 'Enable FTP', 'id' => 'jform_ftp_enable', 'type' => 'fieldset', 'tab' => 'page-server'],
+		['label' => 'Enable Proxy', 'id' => 'jform_proxy_enable', 'type' => 'fieldset', 'tab' => 'page-server'],
+		['label' => 'Database Type', 'id' => 'jform_dbtype', 'type' => 'select', 'tab' => 'page-server'],
+		['label' => 'Host', 'id' => 'jform_host', 'type' => 'input', 'tab' => 'page-server'],
+		['label' => 'Database Username', 'id' => 'jform_user', 'type' => 'input', 'tab' => 'page-server'],
+		['label' => 'Database Name', 'id' => 'jform_db', 'type' => 'input', 'tab' => 'page-server'],
+		['label' => 'Database Tables Prefix', 'id' => 'jform_dbprefix', 'type' => 'input', 'tab' => 'page-server'],
+		['label' => 'Send Mail', 'id' => 'jform_mailonline', 'type' => 'fieldset', 'tab' => 'page-server'],
+		['label' => 'Mailer', 'id' => 'jform_mailer', 'type' => 'select', 'tab' => 'page-server'],
+		['label' => 'From email', 'id' => 'jform_mailfrom', 'type' => 'input', 'tab' => 'page-server'],
+		['label' => 'From Name', 'id' => 'jform_fromname', 'type' => 'input', 'tab' => 'page-server'],
+		['label' => 'Disable Mass Mail', 'id' => 'jform_massmailoff', 'type' => 'fieldset', 'tab' => 'page-server']
+	];
 
 	/**
 	 * @var array  Permissions
 	 */
-	public $permissions = array(
+	public $permissions = [
 		'core.login.site',
 		'core.login.admin',
 		'core.login.offline',
@@ -113,7 +113,7 @@ class GlobalConfigurationPage extends AdminEditPage
 		'core.edit',
 		'core.edit.state',
 		'core.edit.own'
-	);
+	];
 
 	/**
 	 * @var  string  XPath string used to uniquely identify this page
@@ -134,7 +134,7 @@ class GlobalConfigurationPage extends AdminEditPage
 	{
 		$inputFields = $this->getAllInputFields($this->getTabIds());
 		$tabs        = $this->tabs;
-		$helpText    = array();
+		$helpText    = [];
 		foreach ($inputFields as $el)
 		{
 			$this->selectTab($el->tab);
@@ -160,7 +160,7 @@ class GlobalConfigurationPage extends AdminEditPage
 //		$filtersText = $this->driver->findElement(By::id('filters'))->getText();
 //		$helpText[$filtersText] = $this->toWikiHelpFilters('1');
 
-		$result = array();
+		$result = [];
 
 		foreach ($tabs as $tab)
 		{
@@ -183,7 +183,7 @@ class GlobalConfigurationPage extends AdminEditPage
 	public function getTabIds()
 	{
 		$tabs   = $this->driver->findElements(By::xPath("//div[@id='config-document']/div"));
-		$return = array();
+		$return = [];
 		foreach ($tabs as $tab)
 		{
 			$return[] = $tab->getAttribute('id');
@@ -202,7 +202,7 @@ class GlobalConfigurationPage extends AdminEditPage
 	public function toWikiHelpPermissions($groupId)
 	{
 		$objects = $this->getPermissionInputFields($groupId);
-		$helpText = array();
+		$helpText = [];
 
 		foreach ($objects as $object)
 		{
@@ -230,7 +230,7 @@ class GlobalConfigurationPage extends AdminEditPage
 	{
 		$this->selectTab('page-permissions');
 		$this->driver->findElement(By::xPath("//a[@href='#permission-" . $groupId . "']"))->click();
-		$result = array();
+		$result = [];
 
 		foreach ($this->permissions as $permission)
 		{
@@ -238,7 +238,7 @@ class GlobalConfigurationPage extends AdminEditPage
 			$label = $this->driver->findElement(By::xPath("//label[@for='" . $id . "']"));
 			$text  = $label->getText();
 			$input = $this->driver->findElement(By::id($id));
-			$this->driver->executeScript($this->moveToElementByAttribute, array('for', $id));
+			$this->driver->executeScript($this->moveToElementByAttribute, ['for', $id]);
 			sleep(1);
 			$tip               = $label->findElement(By::xPath("//label[@class='tip'][@for='" . $id . "']"));
 			$tipText           = $tip->getAttribute('title');
@@ -312,7 +312,7 @@ class GlobalConfigurationPage extends AdminEditPage
 				$select = 'Editor - TinyMCE';
 				break;
 		}
-		$this->setFieldValues(array('Default Editor' => $select));
+		$this->setFieldValues(['Default Editor' => $select]);
 		$this->clickButton('Save & Close');
 	}
 }

@@ -19,19 +19,19 @@ class ModuleManagerPage extends AdminManagerPage
 	/**
 	 * @var  array  Filters
 	 */
-	public $filters = array(
+	public $filters = [
 		'Site'     => 'filter_client_id',
 		'Status'   => 'filter_state',
 		'Position' => 'filter_position',
 		'Type'     => 'filter_module',
 		'Access'   => 'filter_access',
 		'Language' => 'filter_language',
-	);
+	];
 
 	/**
 	 * @var  array  Toolbar
 	 */
-	public $toolbar = array(
+	public $toolbar = [
 		'New'         => 'toolbar-new',
 		'Edit'        => 'toolbar-edit',
 		'Duplicate'   => 'toolbar-copy',
@@ -43,61 +43,61 @@ class ModuleManagerPage extends AdminManagerPage
 		'Batch'       => 'toolbar-batch',
 		'Options'     => 'toolbar-options',
 		'Help'        => 'toolbar-help',
-	);
+	];
 
 	/**
 	 * @var  array  Submenu
 	 */
-	public $submenu = array(
+	public $submenu = [
 		'option=com_modules&filter_client_id=0',
 		'option=com_modules&filter_client_id=1',
-	);
+	];
 
 	/**
 	 * @var  array  Module types
 	 */
-	public $moduleTypes = array(
-		array('client' => 'site', 'name' => 'Articles - Archived'),
-		array('client' => 'site', 'name' => 'Articles - Categories'),
-		array('client' => 'site', 'name' => 'Articles - Category'),
-		array('client' => 'site', 'name' => 'Articles - Latest'),
-		array('client' => 'site', 'name' => 'Articles - Most Read'),
-		array('client' => 'site', 'name' => 'Articles - Newsflash'),
-		array('client' => 'site', 'name' => 'Articles - Related'),
-		array('client' => 'site', 'name' => 'Banners'),
-		array('client' => 'site', 'name' => 'Breadcrumbs'),
-		array('client' => 'site', 'name' => 'Custom HTML'),
-		array('client' => 'site', 'name' => 'Feed Display'),
-		array('client' => 'site', 'name' => 'Footer'),
-		array('client' => 'site', 'name' => 'Language Switcher'),
-		array('client' => 'site', 'name' => 'Latest Users'),
-		array('client' => 'site', 'name' => 'Login'),
-		array('client' => 'site', 'name' => 'Menu'),
-		array('client' => 'site', 'name' => 'Random Image'),
-		array('client' => 'site', 'name' => 'Search'),
-		array('client' => 'site', 'name' => 'Smart Search'),
-		array('client' => 'site', 'name' => 'Statistics'),
-		array('client' => 'site', 'name' => 'Syndication Feeds'),
-		array('client' => 'site', 'name' => 'Tags - Popular'),
-		array('client' => 'site', 'name' => 'Tags - Similar'),
-		array('client' => 'site', 'name' => 'Who\'s Online'),
-		array('client' => 'site', 'name' => 'Wrapper'),
-		array('client' => 'administrator', 'name' => 'Admin Sub-Menu'),
-		array('client' => 'administrator', 'name' => 'Administrator Menu'),
-		array('client' => 'administrator', 'name' => 'Articles - Latest'),
-		array('client' => 'administrator', 'name' => 'Custom HTML'),
-		array('client' => 'administrator', 'name' => 'Feed Display'),
-		array('client' => 'administrator', 'name' => 'Joomla! Version Information'),
-		array('client' => 'administrator', 'name' => 'Logged-in Users'),
-		array('client' => 'administrator', 'name' => 'Login Form'),
-		array('client' => 'administrator', 'name' => 'Multilingual Status'),
-		array('client' => 'administrator', 'name' => 'Popular Articles'),
-		array('client' => 'administrator', 'name' => 'Quick Icons'),
-		array('client' => 'administrator', 'name' => 'Statistics'),
-		array('client' => 'administrator', 'name' => 'Title'),
-		array('client' => 'administrator', 'name' => 'Toolbar'),
-		array('client' => 'administrator', 'name' => 'User Status'),
-	);
+	public $moduleTypes = [
+		['client' => 'site', 'name' => 'Articles - Archived'],
+		['client' => 'site', 'name' => 'Articles - Categories'],
+		['client' => 'site', 'name' => 'Articles - Category'],
+		['client' => 'site', 'name' => 'Articles - Latest'],
+		['client' => 'site', 'name' => 'Articles - Most Read'],
+		['client' => 'site', 'name' => 'Articles - Newsflash'],
+		['client' => 'site', 'name' => 'Articles - Related'],
+		['client' => 'site', 'name' => 'Banners'],
+		['client' => 'site', 'name' => 'Breadcrumbs'],
+		['client' => 'site', 'name' => 'Custom HTML'],
+		['client' => 'site', 'name' => 'Feed Display'],
+		['client' => 'site', 'name' => 'Footer'],
+		['client' => 'site', 'name' => 'Language Switcher'],
+		['client' => 'site', 'name' => 'Latest Users'],
+		['client' => 'site', 'name' => 'Login'],
+		['client' => 'site', 'name' => 'Menu'],
+		['client' => 'site', 'name' => 'Random Image'],
+		['client' => 'site', 'name' => 'Search'],
+		['client' => 'site', 'name' => 'Smart Search'],
+		['client' => 'site', 'name' => 'Statistics'],
+		['client' => 'site', 'name' => 'Syndication Feeds'],
+		['client' => 'site', 'name' => 'Tags - Popular'],
+		['client' => 'site', 'name' => 'Tags - Similar'],
+		['client' => 'site', 'name' => 'Who\'s Online'],
+		['client' => 'site', 'name' => 'Wrapper'],
+		['client' => 'administrator', 'name' => 'Admin Sub-Menu'],
+		['client' => 'administrator', 'name' => 'Administrator Menu'],
+		['client' => 'administrator', 'name' => 'Articles - Latest'],
+		['client' => 'administrator', 'name' => 'Custom HTML'],
+		['client' => 'administrator', 'name' => 'Feed Display'],
+		['client' => 'administrator', 'name' => 'Joomla! Version Information'],
+		['client' => 'administrator', 'name' => 'Logged-in Users'],
+		['client' => 'administrator', 'name' => 'Login Form'],
+		['client' => 'administrator', 'name' => 'Multilingual Status'],
+		['client' => 'administrator', 'name' => 'Popular Articles'],
+		['client' => 'administrator', 'name' => 'Quick Icons'],
+		['client' => 'administrator', 'name' => 'Statistics'],
+		['client' => 'administrator', 'name' => 'Title'],
+		['client' => 'administrator', 'name' => 'Toolbar'],
+		['client' => 'administrator', 'name' => 'User Status'],
+	];
 
 	/**
 	 * @var  string  XPath string used to uniquely identify this page
@@ -125,7 +125,7 @@ class ModuleManagerPage extends AdminManagerPage
 		$this->clickButton('toolbar-new');
 		$this->driver->waitForElementUntilIsPresent(By::xPath("//a/strong[contains(., '" . $type . "')]"))->click();
 		$moduleEditPage = $this->test->getPageObject('ModuleEditPage');
-		$moduleEditPage->setFieldValues(array('Title' => $title));
+		$moduleEditPage->setFieldValues(['Title' => $title]);
 
 		if (is_array($otherFields))
 		{
@@ -163,7 +163,7 @@ class ModuleManagerPage extends AdminManagerPage
 		$this->searchFor();
 	}
 
-	public function editModule($name, $fields, $groupNames = array())
+	public function editModule($name, $fields, $groupNames = [])
 	{
 		$this->clickItem($name);
 		$moduleEditPage = $this->test->getPageObject('ModuleEditPage');
@@ -182,7 +182,7 @@ class ModuleManagerPage extends AdminManagerPage
 	 *
 	 * @return  array
 	 */
-	public function getModuleFieldValues($title, $client, $fieldNames = array())
+	public function getModuleFieldValues($title, $client, $fieldNames = [])
 	{
 		$this->setFilter('filter_client_id', $client);
 
@@ -196,8 +196,8 @@ class ModuleManagerPage extends AdminManagerPage
 	 */
 	public function getModuleTypes()
 	{
-		$result  = array();
-		$clients = array('Site', 'Administrator');
+		$result  = [];
+		$clients = ['Site', 'Administrator'];
 
 		foreach ($clients as $client)
 		{
@@ -209,7 +209,7 @@ class ModuleManagerPage extends AdminManagerPage
 
 			foreach ($moduleElements as $element)
 			{
-				$result[] = array('client' => strtolower($client), 'name' => $element->getText());
+				$result[] = ['client' => strtolower($client), 'name' => $element->getText()];
 			}
 
 			$this->driver->findElement(By::xPath("//button[contains(., 'Cancel')]"))->click();

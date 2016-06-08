@@ -24,7 +24,7 @@ class CategoryManagerPage extends AdminManagerPage
 	 * @var    array
 	 * @since  3.0
 	 */
-	public $filters = array(
+	public $filters = [
 		'Sort Table By:'    => 'list_fullordering',
 		'20'                => 'list_limit',
 		'Select Max Levels' => 'filter_level',
@@ -32,7 +32,7 @@ class CategoryManagerPage extends AdminManagerPage
 		'Select Access'     => 'filter_access',
 		'Select Language'   => 'filter_language',
 		'Select Tag'        => 'filter_tag'
-	);
+	];
 
 	/**
 	 * Array of toolbar id values for this page
@@ -40,7 +40,7 @@ class CategoryManagerPage extends AdminManagerPage
 	 * @var    array
 	 * @since  3.0
 	 */
-	public $toolbar = array(
+	public $toolbar = [
 		'New'         => 'toolbar-new',
 		'Edit'        => 'toolbar-edit',
 		'Publish'     => 'toolbar-publish',
@@ -53,7 +53,7 @@ class CategoryManagerPage extends AdminManagerPage
 		'Batch'       => 'toolbar-batch',
 		'Options'     => 'toolbar-options',
 		'Help'        => 'toolbar-help',
-	);
+	];
 
 	/**
 	 * XPath string used to uniquely identify this page
@@ -80,12 +80,12 @@ class CategoryManagerPage extends AdminManagerPage
 	 *
 	 * @return  CategoryManagerPage
 	 */
-	public function addCategory($name = 'ABC Testing', $desc = 'System Test Category', $fields = array())
+	public function addCategory($name = 'ABC Testing', $desc = 'System Test Category', $fields = [])
 	{
 		$new_name = $name;
 		$this->clickButton('toolbar-new');
 		$categoryEditPage = $this->test->getPageObject('CategoryEditPage');
-		$categoryEditPage->setFieldValues(array('Title' => $name, 'Description' => $desc));
+		$categoryEditPage->setFieldValues(['Title' => $name, 'Description' => $desc]);
 		$categoryEditPage->setFieldValues($fields);
 		$categoryEditPage->clickButton('toolbar-save');
 		$this->test->getPageObject('CategoryManagerPage');

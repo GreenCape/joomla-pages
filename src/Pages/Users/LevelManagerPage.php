@@ -19,20 +19,20 @@ class LevelManagerPage extends AdminManagerPage
 	 * @var LevelManagerPage
 	 */
 	public $levelManagerPage = null;
-	public $toolbar = array(
+	public $toolbar = [
 		'toolbar-new',
 		'toolbar-edit',
 		'toolbar-delete',
 		'toolbar-options',
 		'toolbar-help'
-	);
-	public $submenu = array(
+	];
+	public $submenu = [
 		'option=com_users&view=users',
 		'option=com_users&view=groups',
 		'option=com_users&view=levels',
 		'option=com_users&view=notes',
 		'option=com_categories&extension=com_users'
-	);
+	];
 	protected $waitForXpath = "//ul/li/a[@href='index.php?option=com_users&view=levels']";
 	protected $url = 'administrator/index.php?option=com_users&view=levels';
 
@@ -44,11 +44,11 @@ class LevelManagerPage extends AdminManagerPage
 	 *
 	 * @return void
 	 */
-	public function addLevel($name = 'Test Level', $groups = array('Public'))
+	public function addLevel($name = 'Test Level', $groups = ['Public'])
 	{
 		$this->clickButton('toolbar-new');
 		$editLevelPage = $this->test->getPageObject('LevelEditPage');
-		$editLevelPage->setFieldValues(array('Level Title' => $name));
+		$editLevelPage->setFieldValues(['Level Title' => $name]);
 		$editLevelPage->setGroups($groups);
 		$editLevelPage->clickButton('toolbar-save');
 		$this->levelManagerPage = $this->test->getPageObject('LevelManagerPage');

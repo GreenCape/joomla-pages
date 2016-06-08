@@ -20,7 +20,7 @@ class UserNotesManagerPage extends AdminManagerPage
 	 * @var UserNotesManagerPage
 	 */
 	public $userNotesManagerPage = null;
-	public $toolbar = array(
+	public $toolbar = [
 
 		'New'         => 'toolbar-new',
 		'Edit'        => 'toolbar-edit',
@@ -32,18 +32,18 @@ class UserNotesManagerPage extends AdminManagerPage
 		'Empty Trash' => 'toolbar-delete',
 		'Options'     => 'toolbar-options',
 		'Help'        => 'toolbar-help',
-	);
-	public $submenu = array(
+	];
+	public $submenu = [
 		'option=com_users&view=users',
 		'option=com_users&view=groups',
 		'option=com_users&view=levels',
 		'option=com_users&view=notes',
 		'option=com_categories&extension=com_users'
-	);
-	public $filters = array(
+	];
+	public $filters = [
 		'Select Status'   => 'filter_published',
 		'Select Category' => 'filter_category_id',
-	);
+	];
 	protected $waitForXpath = "//ul/li/a[@href='index.php?option=com_users&view=notes']";
 	protected $url = 'administrator/index.php?option=com_users&view=notes';
 
@@ -60,7 +60,7 @@ class UserNotesManagerPage extends AdminManagerPage
 	{
 		$this->clickButton('toolbar-new');
 		$editUserNotesPage = $this->test->getPageObject('UserNotesEditPage');
-		$editUserNotesPage->setFieldValues(array('Subject' => $name));
+		$editUserNotesPage->setFieldValues(['Subject' => $name]);
 		$editUserNotesPage->setUser($userName);
 
 		if (is_array($otherFields))

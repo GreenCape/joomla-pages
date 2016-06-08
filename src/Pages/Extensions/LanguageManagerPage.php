@@ -24,10 +24,10 @@ class LanguageManagerPage extends AdminManagerPage
 	 * @var    array
 	 * @since  3.0
 	 */
-	public $filters = array(
+	public $filters = [
 		'Select Status' => 'filter_published',
 		'Select Access' => 'filter_access',
-	);
+	];
 
 	/**
 	 * Array of toolbar id values for this page
@@ -35,7 +35,7 @@ class LanguageManagerPage extends AdminManagerPage
 	 * @var    array
 	 * @since  3.0
 	 */
-	public $toolbar = array(
+	public $toolbar = [
 		'New'              => 'toolbar-new',
 		'Edit'             => 'toolbar-edit',
 		'Publish'          => 'toolbar-publish',
@@ -45,7 +45,7 @@ class LanguageManagerPage extends AdminManagerPage
 		'Empty Trash'      => 'toolbar-delete',
 		'Options'          => 'toolbar-options',
 		'Help'             => 'toolbar-help',
-	);
+	];
 
 	/**
 	 * XPath string used to uniquely identify this page
@@ -78,12 +78,13 @@ class LanguageManagerPage extends AdminManagerPage
 	{
 		$this->clickButton('toolbar-new');
 		$languageEditPage = $this->test->getPageObject('LanguageEditPage');
-		$languageEditPage->setFieldValues(array('Title'             => $title,
-		                                        'Title Native'      => $native_title,
-		                                        'URL Language Code' => $url,
-		                                        'Image Prefix'      => $image_prefix,
-		                                        'Language Tag'      => $language_tag
-		));
+		$languageEditPage->setFieldValues([
+			'Title'             => $title,
+			'Title Native'      => $native_title,
+			'URL Language Code' => $url,
+			'Image Prefix'      => $image_prefix,
+			'Language Tag'      => $language_tag
+		]);
 		$languageEditPage->clickButton('toolbar-save');
 		$this->test->getPageObject('LanguageManagerPage');
 	}

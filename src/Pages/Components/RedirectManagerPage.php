@@ -24,9 +24,9 @@ class RedirectManagerPage extends AdminManagerPage
 	 * @var    array
 	 * @since  3.0
 	 */
-	public $filters = array(
+	public $filters = [
 		'Select Status' => 'filter_state',
-	);
+	];
 
 	/**
 	 * Array of toolbar id values for this page
@@ -34,7 +34,7 @@ class RedirectManagerPage extends AdminManagerPage
 	 * @var    array
 	 * @since  3.0
 	 */
-	public $toolbar = array(
+	public $toolbar = [
 		'New'         => 'toolbar-new',
 		'Edit'        => 'toolbar-edit',
 		'Enable'      => 'toolbar-publish',
@@ -44,7 +44,7 @@ class RedirectManagerPage extends AdminManagerPage
 		'Options'     => 'toolbar-options',
 		'Help'        => 'toolbar-help',
 		'Empty Trash' => 'toolbar-delete',
-	);
+	];
 
 	/**
 	 * XPath string used to uniquely identify this page
@@ -76,11 +76,12 @@ class RedirectManagerPage extends AdminManagerPage
 	{
 		$this->clickButton('toolbar-new');
 		$redirectEditPage = $this->test->getPageObject('RedirectEditPage');
-		$redirectEditPage->setFieldValues(array('Source URL'      => $srcLink,
-		                                        'Destination URL' => $desLink,
-		                                        'Status'          => $status,
-		                                        'Comment'         => $comments
-		));
+		$redirectEditPage->setFieldValues([
+			'Source URL'      => $srcLink,
+			'Destination URL' => $desLink,
+			'Status'          => $status,
+			'Comment'         => $comments
+		]);
 		$redirectEditPage->clickButton('toolbar-save');
 		$this->test->getPageObject('RedirectManagerPage');
 	}

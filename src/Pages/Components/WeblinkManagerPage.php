@@ -24,13 +24,13 @@ class WeblinkManagerPage extends AdminManagerPage
 	 * @var    array
 	 * @since  3.2
 	 */
-	public $filters = array(
+	public $filters = [
 		'Select Status'   => 'filter_state',
 		'Select Category' => 'filter_category_id',
 		'Select Access'   => 'filter_access',
 		'Select Language' => 'filter_language',
 		'Select Tag'      => 'filter_tag',
-	);
+	];
 
 	/**
 	 * Array of toolbar id values for this page
@@ -38,7 +38,7 @@ class WeblinkManagerPage extends AdminManagerPage
 	 * @var    array
 	 * @since  3.2
 	 */
-	public $toolbar = array(
+	public $toolbar = [
 		'New'         => 'toolbar-new',
 		'Edit'        => 'toolbar-edit',
 		'Publish'     => 'toolbar-publish',
@@ -50,7 +50,7 @@ class WeblinkManagerPage extends AdminManagerPage
 		'Batch'       => 'toolbar-batch',
 		'Options'     => 'toolbar-options',
 		'Help'        => 'toolbar-help',
-	);
+	];
 
 	/**
 	 * XPath string used to uniquely identify this page
@@ -80,7 +80,7 @@ class WeblinkManagerPage extends AdminManagerPage
 	{
 		$this->clickButton('toolbar-new');
 		$contactEditPage = $this->test->getPageObject('WeblinkEditPage');
-		$contactEditPage->setFieldValues(array('Title' => $name, 'URL' => $url));
+		$contactEditPage->setFieldValues(['Title' => $name, 'URL' => $url]);
 		if ($fields)
 		{
 			$contactEditPage->setFieldValues($fields);

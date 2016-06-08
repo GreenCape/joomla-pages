@@ -43,7 +43,7 @@ class SiteContentCategoriesPage extends SitePage
 	public function getCategoryTitles()
 	{
 		$arrayElement = $this->driver->findElements(By::xPath("//h3//a[contains(text(), '')]"));
-		$arrayTitles  = array();
+		$arrayTitles  = [];
 
 		for ($i = 0; $i < count($arrayElement); $i++)
 		{

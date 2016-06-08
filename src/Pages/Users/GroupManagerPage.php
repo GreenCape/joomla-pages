@@ -19,20 +19,20 @@ class GroupManagerPage extends AdminManagerPage
 	 * @var GroupManagerPage
 	 */
 	public $groupManagerPage = null;
-	public $toolbar = array(
+	public $toolbar = [
 		'toolbar-new',
 		'toolbar-edit',
 		'toolbar-delete',
 		'toolbar-options',
 		'toolbar-help'
-	);
-	public $submenu = array(
+	];
+	public $submenu = [
 		'option=com_users&view=users',
 		'option=com_users&view=groups',
 		'option=com_users&view=levels',
 		'option=com_users&view=notes',
 		'option=com_categories&extension=com_users'
-	);
+	];
 	protected $waitForXpath = "//ul/li/a[@href='index.php?option=com_users&view=groups']";
 	protected $url = 'administrator/index.php?option=com_users&view=groups';
 
@@ -48,7 +48,7 @@ class GroupManagerPage extends AdminManagerPage
 	{
 		$this->clickButton('toolbar-new');
 		$editGroupPage = $this->test->getPageObject('GroupEditPage');
-		$editGroupPage->setFieldValues(array('Group Title' => $name, 'Group Parent' => $parent));
+		$editGroupPage->setFieldValues(['Group Title' => $name, 'Group Parent' => $parent]);
 		$editGroupPage->clickButton('toolbar-save');
 		$this->groupManagerPage = $this->test->getPageObject('GroupManagerPage');
 	}

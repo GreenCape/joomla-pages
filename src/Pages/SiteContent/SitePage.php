@@ -22,12 +22,12 @@ abstract class SitePage
 	/**
 	 * @var array $toolbar Associative array as label => id for the toolbar buttons
 	 */
-	public $toolbar = array();
+	public $toolbar = [];
 
 	/**
 	 * @var  array of top menu text that is visible in all frontend pages
 	 */
-	public $visibleMenuText = array('Home', 'Sample Sites', 'Joomla.org');
+	public $visibleMenuText = ['Home', 'Sample Sites', 'Joomla.org'];
 
 	/**
 	 * @var Webdriver  The driver object for invoking driver methods.

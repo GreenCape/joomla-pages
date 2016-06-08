@@ -22,7 +22,7 @@ class PluginEditPage extends AdminEditPage
 	 * @var    array
 	 * @since  3.0
 	 */
-	public $tabs = array('general');
+	public $tabs = ['general'];
 
 	/**
 	 * Array of tab labels for this page
@@ -32,7 +32,7 @@ class PluginEditPage extends AdminEditPage
 	 * @var    array
 	 * @since  3.0
 	 */
-	public $tabLabels = array('Details', 'Basic Options');
+	public $tabLabels = ['Details', 'Basic Options'];
 
 	/**
 	 * Array of all the field Details of the Edit page, along with the ID and tab value they are present on
@@ -40,13 +40,13 @@ class PluginEditPage extends AdminEditPage
 	 * @var    array
 	 * @since  3.0
 	 */
-	public $inputFields = array(
-		array('label' => 'Status', 'id' => 'jform_enabled', 'type' => 'fieldset', 'tab' => 'general'),
-		array('label' => 'Access', 'id' => 'jform_access', 'type' => 'select', 'tab' => 'general'),
-		array('label' => 'Ordering', 'id' => 'jformordering', 'type' => 'select', 'tab' => 'general'),
-		array('label' => 'Check category deletion', 'id' => 'jform_params_check_categories', 'type' => 'fieldset', 'tab' => 'general'),
-		array('label' => 'Email on new site article', 'id' => 'jform_params_email_new_fe', 'type' => 'fieldset', 'tab' => 'general'),
-	);
+	public $inputFields = [
+		['label' => 'Status', 'id' => 'jform_enabled', 'type' => 'fieldset', 'tab' => 'general'],
+		['label' => 'Access', 'id' => 'jform_access', 'type' => 'select', 'tab' => 'general'],
+		['label' => 'Ordering', 'id' => 'jformordering', 'type' => 'select', 'tab' => 'general'],
+		['label' => 'Check category deletion', 'id' => 'jform_params_check_categories', 'type' => 'fieldset', 'tab' => 'general'],
+		['label' => 'Email on new site article', 'id' => 'jform_params_email_new_fe', 'type' => 'fieldset', 'tab' => 'general'],
+	];
 
 	/**
 	 * XPath string used to uniquely identify this page

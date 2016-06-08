@@ -23,7 +23,7 @@ class TemplateEditPage extends AdminEditPage
 	 * @var    array
 	 * @since  3.0
 	 */
-	public $tabs = array('details');
+	public $tabs = ['details'];
 
 	/**
 	 * Array of tab labels for this page
@@ -33,7 +33,7 @@ class TemplateEditPage extends AdminEditPage
 	 * @var    array
 	 * @since  3.0
 	 */
-	public $tabLabels = array('Details', 'Options');
+	public $tabLabels = ['Details', 'Options'];
 
 	/**
 	 * Array of all the field Details of the Edit page, along with the ID and tab value they are present on
@@ -41,18 +41,18 @@ class TemplateEditPage extends AdminEditPage
 	 * @var array
 	 * @since 3.0
 	 */
-	public $inputFields = array(
-		array('label' => 'Style Name', 'id' => 'jform_title', 'type' => 'input', 'tab' => 'details'),
-		array('label' => 'Default', 'id' => 'jform_home', 'type' => 'fieldset', 'tab' => 'details'),
-		array(
+	public $inputFields = [
+		['label' => 'Style Name', 'id' => 'jform_title', 'type' => 'input', 'tab' => 'details'],
+		['label' => 'Default', 'id' => 'jform_home', 'type' => 'fieldset', 'tab' => 'details'],
+		[
 			'lable' => 'Show Site Name',
 			'id'    => 'jform_params_showSiteName',
 			'type'  => 'fieldset',
 			'tab'   => 'options'
-		),
-		array('lable' => 'Select Colour', 'id' => 'jform_params_colourChoice', 'type' => 'select', 'tab' => 'options'),
-		array('lable' => 'Bold Text', 'id' => 'jform_params_boldText', 'type' => 'fieldset', 'tab' => 'options'),
-	);
+		],
+		['lable' => 'Select Colour', 'id' => 'jform_params_colourChoice', 'type' => 'select', 'tab' => 'options'],
+		['lable' => 'Bold Text', 'id' => 'jform_params_boldText', 'type' => 'fieldset', 'tab' => 'options'],
+	];
 
 	/**
 	 * XPath string used to uniquely identify this page

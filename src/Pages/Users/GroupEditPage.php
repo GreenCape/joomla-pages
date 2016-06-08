@@ -20,10 +20,10 @@ class GroupEditPage extends AdminEditPage
 	 *
 	 * @var unknown_type
 	 */
-	public $inputFields = array(
-		array('label' => 'Group Title', 'id' => 'jform_title', 'type' => 'input', 'tab' => 'header'),
-		array('label' => 'Group Parent', 'id' => 'jform_parent_id', 'type' => 'select', 'tab' => 'header'),
-	);
+	public $inputFields = [
+		['label' => 'Group Title', 'id' => 'jform_title', 'type' => 'input', 'tab' => 'header'],
+		['label' => 'Group Parent', 'id' => 'jform_parent_id', 'type' => 'select', 'tab' => 'header'],
+	];
 	protected $waitForXpath = "//form[@id='group-form']";
 	protected $url = 'administrator/index.php?option=com_users&view=group&layout=edit';
 }

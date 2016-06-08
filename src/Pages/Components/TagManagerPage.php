@@ -24,11 +24,11 @@ class TagManagerPage extends AdminManagerPage
 	 * @var    array
 	 * @since  3.0
 	 */
-	public $filters = array(
+	public $filters = [
 		'Select Status'   => 'filter_published',
 		'Select Access'   => 'filter_access',
 		'Select Language' => 'filter_language',
-	);
+	];
 
 	/**
 	 * Array of toolbar id values for this page
@@ -36,7 +36,7 @@ class TagManagerPage extends AdminManagerPage
 	 * @var    array
 	 * @since  3.0
 	 */
-	public $toolbar = array(
+	public $toolbar = [
 		'New'         => 'toolbar-new',
 		'Edit'        => 'toolbar-edit',
 		'Publish'     => 'toolbar-publish',
@@ -48,7 +48,7 @@ class TagManagerPage extends AdminManagerPage
 		'Batch'       => 'toolbar-batch',
 		'Options'     => 'toolbar-options',
 		'Help'        => 'toolbar-help',
-	);
+	];
 
 	/**
 	 * XPath string used to uniquely identify this page
@@ -80,7 +80,7 @@ class TagManagerPage extends AdminManagerPage
 	{
 		$this->clickButton('toolbar-new');
 		$tagEditPage = $this->test->getPageObject('TagEditPage');
-		$tagEditPage->setFieldValues(array('Title' => $name, 'Caption' => $caption, 'Alt' => $alt, 'Float' => $float));
+		$tagEditPage->setFieldValues(['Title' => $name, 'Caption' => $caption, 'Alt' => $alt, 'Float' => $float]);
 		$tagEditPage->clickButton('toolbar-save');
 		$this->test->getPageObject('TagManagerPage');
 	}

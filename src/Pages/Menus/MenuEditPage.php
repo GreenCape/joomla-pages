@@ -19,11 +19,11 @@ class MenuEditPage extends AdminEditPage
 	 *
 	 * @var  array
 	 */
-	public $inputFields = array(
-		array('label' => 'Title', 'id' => 'jform_title', 'type' => 'input', 'tab' => 'header'),
-		array('label' => 'Menu Type', 'id' => 'jform_menutype', 'type' => 'input', 'tab' => 'header'),
-		array('label' => 'Description', 'id' => 'jform_menudescription', 'type' => 'input', 'tab' => 'header'),
-	);
+	public $inputFields = [
+		['label' => 'Title', 'id' => 'jform_title', 'type' => 'input', 'tab' => 'header'],
+		['label' => 'Menu Type', 'id' => 'jform_menutype', 'type' => 'input', 'tab' => 'header'],
+		['label' => 'Description', 'id' => 'jform_menudescription', 'type' => 'input', 'tab' => 'header'],
+	];
 
 	/**
 	 * @var  string  XPath string used to uniquely identify this page

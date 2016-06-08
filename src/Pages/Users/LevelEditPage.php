@@ -21,9 +21,9 @@ class LevelEditPage extends AdminEditPage
 	 *
 	 * @var unknown_type
 	 */
-	public $inputFields = array(
-		array('label' => 'Level Title', 'id' => 'jform_title', 'type' => 'input', 'tab' => 'header')
-	);
+	public $inputFields = [
+		['label' => 'Level Title', 'id' => 'jform_title', 'type' => 'input', 'tab' => 'header']
+	];
 	protected $waitForXpath = "//form[@id='level-form']";
 	protected $url = 'administrator/index.php?option=com_users&view=level&layout=edit';
 
@@ -34,9 +34,9 @@ class LevelEditPage extends AdminEditPage
 	 *
 	 * @return array
 	 */
-	public function getAllInputFields($tabIds = array())
+	public function getAllInputFields($tabIds = [])
 	{
-		$return = array();
+		$return = [];
 		$labels = $this->driver->findElements(By::xPath("//fieldset/div[@class='control-group']/div/label"));
 		$tabId  = 'header';
 
@@ -60,12 +60,12 @@ class LevelEditPage extends AdminEditPage
 	 */
 	public function getGroups()
 	{
-		$result   = array();
+		$result   = [];
 		$elements = $this->driver->findElements(By::xPath("//input[@checked='checked']/../../label"));
 
 		foreach ($elements as $el)
 		{
-			$result[] = str_replace(array('|', '—'), '', $el->getText());
+			$result[] = str_replace(['|', '—'], '', $el->getText());
 		}
 
 		return $result;

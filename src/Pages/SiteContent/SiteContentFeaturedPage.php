@@ -42,7 +42,7 @@ class SiteContentFeaturedPage extends SitePage
 	public function getArticleTitles()
 	{
 		$arrayElement = $this->driver->findElements(By::xPath("//h2//a[contains(text(), '')]"));
-		$arrayTitles  = array();
+		$arrayTitles  = [];
 
 		for ($i = 0; $i < count($arrayElement); $i++)
 		{
@@ -60,7 +60,7 @@ class SiteContentFeaturedPage extends SitePage
 	public function getContactTitles()
 	{
 		$arrayElement = $this->driver->findElements(By::xPath("//a[contains(text(), '')]"));
-		$arrayTitles  = array();
+		$arrayTitles  = [];
 
 		for ($i = 0; $i < count($arrayElement); $i++)
 		{
@@ -78,7 +78,7 @@ class SiteContentFeaturedPage extends SitePage
 	public function getArticleText()
 	{
 		$arrayElement = $this->driver->findElements(By::xPath("//p[contains(text(),'')]"));
-		$arrayText    = array();
+		$arrayText    = [];
 
 		for ($i = 0; $i < count($arrayElement); $i++)
 		{

@@ -42,7 +42,7 @@ class SiteArchivedArticlesPage extends SitePage
 	public function getArticleTitles()
 	{
 		$arrayElement = $this->driver->findElements(By::xPath("//h2//a[contains(text(), '')]"));
-		$arrayTitles  = array();
+		$arrayTitles  = [];
 
 		for ($i = 0; $i < count($arrayElement); $i++)
 		{

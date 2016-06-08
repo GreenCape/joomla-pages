@@ -18,7 +18,7 @@ abstract class AdminManagerPage extends AdminPage
 	/**
 	 * @var  array  Toolbar
 	 */
-	public $toolbar = array();
+	public $toolbar = [];
 
 	/**
 	 * @var  AdminEditPage
@@ -28,7 +28,7 @@ abstract class AdminManagerPage extends AdminPage
 	/**
 	 * @var  array  Associative array as label => id for filter select element
 	 */
-	public $filters = array();
+	public $filters = [];
 
 	/**
 	 * Returns an array of field values from an edit screen.
@@ -42,7 +42,7 @@ abstract class AdminManagerPage extends AdminPage
 	{
 		$this->clickItem($itemName);
 		$this->editItem = $this->test->getPageObject($className);
-		$result         = array();
+		$result         = [];
 		if (is_array($fieldNames))
 		{
 			foreach ($fieldNames as $name)
@@ -106,7 +106,7 @@ abstract class AdminManagerPage extends AdminPage
 	{
 		$container = $this->driver->findElement(By::xPath("//div[contains(@class, 'filter-select') or contains(@class, 'js-stools')]"));
 		$elements  = $container->findElements(By::tagName('select'));
-		$result    = array();
+		$result    = [];
 		// @var WebdriverElement $el
 		foreach ($elements as $el)
 		{
@@ -171,11 +171,11 @@ abstract class AdminManagerPage extends AdminPage
 	 */
 	public function orderAndGetRowNumbers($orderings, $rows)
 	{
-		$result = array();
+		$result = [];
 
 		foreach ($orderings as $order)
 		{
-			$result[$order] = array();
+			$result[$order] = [];
 
 			// Check to see whether there is a separate sort direction list control
 			$directionTable = $this->driver->findElements(By::id('directionTable_chzn'));

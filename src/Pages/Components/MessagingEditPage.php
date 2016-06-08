@@ -22,7 +22,7 @@ class MessagingEditPage extends AdminEditPage
 	 * @var    array
 	 * @since  3.2
 	 */
-	public $tabs = array('');
+	public $tabs = [''];
 
 	/**
 	 * Array of all the field Details of the Edit page, along with the ID and tab value they are present on
@@ -30,11 +30,11 @@ class MessagingEditPage extends AdminEditPage
 	 * @var    array
 	 * @since  3.2
 	 */
-	public $inputFields = array(
-		array('label' => 'Recipient', 'id' => 'jform_user_id_to', 'type' => 'input', 'tab' => ''),
-		array('label' => 'Subject', 'id' => 'jform_subject', 'type' => 'input', 'tab' => ''),
-		array('label' => 'Description', 'id' => 'jform_message_ifr', 'type' => 'textarea', 'tab' => ''),
-	);
+	public $inputFields = [
+		['label' => 'Recipient', 'id' => 'jform_user_id_to', 'type' => 'input', 'tab' => ''],
+		['label' => 'Subject', 'id' => 'jform_subject', 'type' => 'input', 'tab' => ''],
+		['label' => 'Description', 'id' => 'jform_message_ifr', 'type' => 'textarea', 'tab' => ''],
+	];
 
 	/**
 	 * XPath string used to uniquely identify this page

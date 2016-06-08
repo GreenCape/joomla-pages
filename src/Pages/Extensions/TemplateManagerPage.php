@@ -24,10 +24,10 @@ class TemplateManagerPage extends AdminManagerPage
 	 * @var    array
 	 * @since  3.0
 	 */
-	public $filters = array(
+	public $filters = [
 		'Select Template' => 'filter_template',
 		'Select Location' => 'filter_client_id',
-	);
+	];
 
 	/**
 	 * Array of toolbar id values for this page
@@ -35,7 +35,7 @@ class TemplateManagerPage extends AdminManagerPage
 	 * @var    array
 	 * @since  3.0
 	 */
-	public $toolbar = array(
+	public $toolbar = [
 		'Make Default' => 'toolbar-star',
 		'Edit'         => 'toolbar-edit',
 		'Duplicate'    => 'toolbar-copy',
@@ -43,7 +43,7 @@ class TemplateManagerPage extends AdminManagerPage
 		'Options'      => 'toolbar-options',
 		'Help'         => 'toolbar-help',
 		'Save as Copy' => 'toolbar-save-copy',
-	);
+	];
 
 	/**
 	 * XPath string used to uniquely identify this page

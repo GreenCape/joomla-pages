@@ -20,17 +20,17 @@ abstract class AdminPage
 	/**
 	 * @var array $toolbar Associative array as label => id for the toolbar buttons.
 	 */
-	public $toolbar = array();
+	public $toolbar = [];
 
 	/**
 	 * @var  array of top menu text that is initially visible in all admin menus
 	 */
-	public $visibleMenuText = array('System', 'Users', 'Menus', 'Content', 'Components', 'Extensions', 'Help');
+	public $visibleMenuText = ['System', 'Users', 'Menus', 'Content', 'Components', 'Extensions', 'Help'];
 
 	/**
 	 * @var  array  All top menu links in admin screens. These are common in all admin screens.
 	 */
-	public $allMenuLinks = array(
+	public $allMenuLinks = [
 		'System'                            => 'administrator/index.php#',
 		'Control Panel'                     => 'administrator/index.php',
 		'Global Configuration'              => 'administrator/index.php?option=com_config',
@@ -108,7 +108,7 @@ abstract class AdminPage
 		'Developer Resources'               => 'http://developer.joomla.org/',
 		'Joomla Shop'                       => 'http://shop.joomla.org/',
 		'Tags'                              => 'administrator/index.php?option=com_tags',
-	);
+	];
 
 	/**
 	 * This variable creates a JavaScript function called moveToElementByAttribute.
@@ -277,7 +277,7 @@ abstract class AdminPage
 	{
 		$menuContainer = $this->driver->findElement(By::id('menu'));
 		$menus         = $menuContainer->findElements(By::tagName('a'));
-		$return        = array();
+		$return        = [];
 		foreach ($menus as $menu)
 		{
 			$menuObject       = new stdClass;
@@ -320,7 +320,7 @@ abstract class AdminPage
 	{
 		$menuContainer = $this->driver->findElement(By::id('menu'));
 		$menus         = $menuContainer->findElements(By::tagName('a'));
-		$return        = array();
+		$return        = [];
 		foreach ($menus as $menu)
 		{
 			if ($text = $menu->getText())

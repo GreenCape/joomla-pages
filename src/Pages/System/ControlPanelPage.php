@@ -17,7 +17,7 @@ class ControlPanelPage extends AdminPage
 	/**
 	 * @var  array  Array of Control Panel icon text and links
 	 */
-	public $expectedIconArray = array(
+	public $expectedIconArray = [
 		'Add New Article'      => 'administrator/index.php?option=com_content&task=article.add',
 		'Article Manager'      => 'administrator/index.php?option=com_content',
 		'Category Manager'     => 'administrator/index.php?option=com_categories&extension=com_content',
@@ -29,7 +29,7 @@ class ControlPanelPage extends AdminPage
 		'Template Manager'     => 'administrator/index.php?option=com_templates',
 		'Language Manager'     => 'administrator/index.php?option=com_languages',
 		'Install Extensions'   => 'administrator/index.php?option=com_installer',
-	);
+	];
 
 	/**
 	 * @var  string  XPath string used to uniquely identify this page
@@ -50,7 +50,7 @@ class ControlPanelPage extends AdminPage
 	{
 		$container = $this->driver->findElement(By::xPath("//div[contains(@class, 'quick-icons')]"));
 		$elements  = $container->findElements(By::tagName('a'));
-		$return    = array();
+		$return    = [];
 		foreach ($elements as $element)
 		{
 			$object       = new stdClass();
@@ -71,7 +71,7 @@ class ControlPanelPage extends AdminPage
 	{
 		$container = $this->driver->findElement(By::id('panel-sliders'));
 		$elements  = $container->findElements(By::tagName('h3'));
-		$return    = array();
+		$return    = [];
 		foreach ($elements as $element)
 		{
 			$object       = new stdClass();

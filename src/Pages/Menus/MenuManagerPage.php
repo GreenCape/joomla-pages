@@ -19,26 +19,26 @@ class MenuManagerPage extends AdminManagerPage
 	/**
 	 * @var  array  Filters
 	 */
-	public $filters = array();
+	public $filters = [];
 
 	/**
 	 * @var  array  Toolbar
 	 */
-	public $toolbar = array(
+	public $toolbar = [
 		'New'     => 'toolbar-new',
 		'Edit'    => 'toolbar-edit',
 		'Delete'  => 'toolbar-delete',
 		'Rebuild' => 'toolbar-refresh',
 		'Options' => 'toolbar-options',
 		'Help'    => 'toolbar-help',
-	);
+	];
 
 	/**
 	 * @var  array  Sub menu
 	 */
-	public $submenu = array(
+	public $submenu = [
 		'option=com_menus&view=items',
-	);
+	];
 
 	/**
 	 * @var  string  XPath string used to uniquely identify this page
@@ -63,7 +63,7 @@ class MenuManagerPage extends AdminManagerPage
 	{
 		$this->clickButton('toolbar-new');
 		$menuEditPage = $this->test->getPageObject('MenuEditPage');
-		$menuEditPage->setFieldValues(array('Title' => $title, 'Menu type' => $type, 'Description' => $description));
+		$menuEditPage->setFieldValues(['Title' => $title, 'Menu type' => $type, 'Description' => $description]);
 		$menuEditPage->clickButton('toolbar-save');
 
 		return $this->test->getPageObject('MenuManagerPage');
@@ -133,7 +133,7 @@ class MenuManagerPage extends AdminManagerPage
 		$this->checkBox($itemName);
 		$this->clickButton('Edit');
 		$this->editItem = $this->test->getPageObject($className);
-		$result         = array();
+		$result         = [];
 
 		if (is_array($fieldNames))
 		{

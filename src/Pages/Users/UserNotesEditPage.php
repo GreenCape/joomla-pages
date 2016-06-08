@@ -21,15 +21,15 @@ class UserNotesEditPage extends AdminEditPage
 	 *
 	 * @var unknown_type
 	 */
-	public $inputFields = array(
-		array('label' => 'Subject', 'id' => 'jform_subject', 'type' => 'input', 'tab' => 'header'),
-		array('label' => 'User', 'id' => 'jform_user_id', 'type' => 'input', 'tab' => 'header'),
-		array('label' => 'Category', 'id' => 'jform_catid', 'type' => 'select', 'tab' => 'header'),
-		array('label' => 'Status', 'id' => 'jform_state', 'type' => 'select', 'tab' => 'header'),
-		array('label' => 'Review Date', 'id' => 'jform_review_time', 'type' => 'input', 'tab' => 'header'),
-		array('label' => 'Version Note', 'id' => 'jform_version_note', 'type' => 'input', 'tab' => 'header'),
-		array('label' => 'Note', 'id' => 'jform_body', 'type' => 'textarea', 'tab' => 'header'),
-	);
+	public $inputFields = [
+		['label' => 'Subject', 'id' => 'jform_subject', 'type' => 'input', 'tab' => 'header'],
+		['label' => 'User', 'id' => 'jform_user_id', 'type' => 'input', 'tab' => 'header'],
+		['label' => 'Category', 'id' => 'jform_catid', 'type' => 'select', 'tab' => 'header'],
+		['label' => 'Status', 'id' => 'jform_state', 'type' => 'select', 'tab' => 'header'],
+		['label' => 'Review Date', 'id' => 'jform_review_time', 'type' => 'input', 'tab' => 'header'],
+		['label' => 'Version Note', 'id' => 'jform_version_note', 'type' => 'input', 'tab' => 'header'],
+		['label' => 'Note', 'id' => 'jform_body', 'type' => 'textarea', 'tab' => 'header'],
+	];
 	protected $waitForXpath = "//form[@id='note-form']";
 	protected $url = 'administrator/index.php?option=com_users&view=note&layout=edit';
 
@@ -40,9 +40,9 @@ class UserNotesEditPage extends AdminEditPage
 	 *
 	 * @return array
 	 */
-	public function getAllInputFields($tabIds = array())
+	public function getAllInputFields($tabIds = [])
 	{
-		$return = array();
+		$return = [];
 		$labels = $this->driver->findElements(By::xPath("//fieldset/div[@class='control-group']/div/label"));
 		$tabId  = 'header';
 
