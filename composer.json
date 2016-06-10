@@ -1,0 +1,15 @@
+{
+  "name": "greencape/joomla-pages",
+  "description": "Page and Step Objects for the Joomla! core improving your Acceptance Tests.",
+  "minimum-stability": "stable",
+  "license": "GPL3+",
+  "authors": [
+    {
+      "name": "Niels Braczek",
+      "email": "nbraczek@bsds.de"
+    }
+  ],
+  "require": {
+    "facebook/webdriver": "1.1.1"
+  }
+}
